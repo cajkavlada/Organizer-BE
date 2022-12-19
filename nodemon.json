@@ -1,0 +1,8 @@
+{
+  "env": {
+    "DB_USERNAME": "cajkavla",
+    "DB_PASSWORD": "Assassin4",
+    "DB_NAME": "organizer",
+    "API_PRIVATE_KEY": "24092022princezna"
+  }
+}
