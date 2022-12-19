@@ -26,6 +26,8 @@ app.use('/api/tasks', tasksRoutes);
 app.use(errors.unknownRouteError);
 app.use(errors.defaultError);
 
+app.listen(process.env.PORT || 5000);
+/*
 mongoose
   .connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.ql0cuax.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`)
   .then(() => {
@@ -34,3 +36,4 @@ mongoose
   .catch(err => { 
     console.log(err);
   })
+*/
