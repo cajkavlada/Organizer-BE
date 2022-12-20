@@ -6,7 +6,8 @@ const User = require('../users/users-model');
 const getTasks = async (_, res, next) => {
   // const tasks = await Task.find().exec();
   res.json({
-    test: process.env.DB_USERNAME
+    test: process.env.DB_USERNAME,
+    test2: "nefunguje",
   });
 };
 
