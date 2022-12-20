@@ -31,8 +31,10 @@ app.use(errors.defaultError);
 mongoose
   .connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.ql0cuax.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`)
   .then(() => {
+    console.log('..........................HERE WORKING .....................................');
     app.listen(process.env.PORT || 5000);
   })
   .catch(err => { 
+    console.log('..........................HERE NOT WORKING .....................................');
     console.log(err);
   });
