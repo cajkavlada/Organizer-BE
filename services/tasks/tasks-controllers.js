@@ -4,8 +4,16 @@ const Task = require('./tasks-model');
 const User = require('../users/users-model');
 
 const getTasks = async (_, res, next) => {
-  const tasks = await Task.find().exec();
-  res.json(tasks);
+
+  console.log("tasks retrieved");
+  // const tasks = await Task.find().exec();
+  res.json({
+    test: 'testik',
+    DB_USERNAME: process.env.DB_USERNAME,
+    DB_PASSWORD: process.env.DB_PASSWORD,
+    DB_NAME: process.env.DB_NAME,
+    API_PRIVATE_KEY: process.env.API_PRIVATE_KEY
+  });
 };
 
 const getTaskById = async (req, res, next) => {
